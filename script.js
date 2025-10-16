@@ -40,6 +40,31 @@ function urlDecode(str) {
   }
 }
 
+// Tab switching functionality
+function setupTabs(markdownText) {
+  const htmlTab = document.getElementById('tab-html');
+  const sourceTab = document.getElementById('tab-source');
+  const outputElement = document.getElementById('markdown-output');
+  const sourceElement = document.getElementById('markdown-source');
+  
+  // Set the source content
+  sourceElement.value = markdownText;
+  
+  htmlTab.addEventListener('click', () => {
+    htmlTab.classList.add('active');
+    sourceTab.classList.remove('active');
+    outputElement.classList.remove('hidden');
+    sourceElement.classList.add('hidden');
+  });
+  
+  sourceTab.addEventListener('click', () => {
+    sourceTab.classList.add('active');
+    htmlTab.classList.remove('active');
+    sourceElement.classList.remove('hidden');
+    outputElement.classList.add('hidden');
+  });
+}
+
 // Main application
 async function loadMarkdownContent() {
   const loadingElement = document.getElementById('loading');
@@ -115,6 +140,9 @@ async function loadMarkdownContent() {
     outputElement.querySelectorAll('pre code').forEach((block) => {
       hljs.highlightElement(block);
     });
+    
+    // Setup tabs
+    setupTabs(markdownText);
     
   } catch (error) {
     console.error('Error processing Markdown:', error);
