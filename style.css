@@ -99,6 +99,40 @@ footer {
   padding: 0;
 }
 
+/* Tabs */
+#markdown-tabs {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.tab {
+  padding: 0.5rem 1rem;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-bottom: none;
+  cursor: pointer;
+  border-radius: 4px 4px 0 0;
+  margin-right: 0.25rem;
+}
+
+.tab.active {
+  background-color: white;
+  border-bottom: 1px solid white;
+  margin-bottom: -1px;
+  z-index: 1;
+  position: relative;
+}
+
+/* Source view */
+#markdown-source {
+  width: 100%;
+  min-height: 200px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  resize: vertical;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
 /* Responsive design */
 @media (max-width: 600px) {
   main {
