@@ -21,9 +21,16 @@
       <p>Error: <span id="error-message"></span></p>
     </div>
     
+    <div id="markdown-tabs">
+      <button id="tab-html" class="tab active">Rendered HTML</button>
+      <button id="tab-source" class="tab">Markdown Source</button>
+    </div>
+    
     <article id="markdown-output" class="markdown-content">
       <!-- Converted Markdown content will be inserted here -->
     </article>
+    
+    <textarea id="markdown-source" class="markdown-content hidden" readonly></textarea>
   </main>
   
   <footer>
