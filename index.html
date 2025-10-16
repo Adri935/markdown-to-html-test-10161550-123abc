@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown to HTML Converter</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+</head>
+<body>
+  <header>
+    <h1>Markdown to HTML Converter</h1>
+  </header>
+  
+  <main>
+    <div id="loading" class="loading hidden">
+      <p>Loading and converting Markdown...</p>
+    </div>
+    
+    <div id="error" class="error hidden">
+      <p>Error: <span id="error-message"></span></p>
+    </div>
+    
+    <article id="markdown-output" class="markdown-content">
+      <!-- Converted Markdown content will be inserted here -->
+    </article>
+  </main>
+  
+  <footer>
+    <p>Markdown to HTML Converter &copy; 2023</p>
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
